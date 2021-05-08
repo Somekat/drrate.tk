@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:1313/blog/windowsvslinux/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./winvslinux_files/livereload.js.download" data-no-instant="" defer=""></script>
+    
+      <title>
+        Windows VS Linux in scripting ::
+        mcfan's site — what is this
+      </title>
+    
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here&amp;rsquo;s a comparason between windows and linux
+elevatebuild.bat
+:::::::::::::::::::::::::::::::::::::::::::: :: Elevate.cmd - Version 4 :: Automatically check &amp;amp; get admin rights :: see &amp;#34;https://stackoverflow.com/a/12264592/1016343&amp;#34; for description :::::::::::::::::::::::::::::::::::::::::::: @echo off CLS ECHO. ECHO ============================= ECHO Running Admin shell ECHO ============================= :init setlocal DisableDelayedExpansion set cmdInvoke=1 set winSysFolder=System32 set &amp;#34;batchPath=%~0&amp;#34; for %%k in (%0) do set batchName=%%~nk set &amp;#34;vbsGetPrivileges=%temp%\OEgetPriv_%batchName%.vbs&amp;#34; setlocal EnableDelayedExpansion :checkPrivileges NET FILE 1&amp;gt;NUL 2&amp;gt;NUL if &amp;#39;%errorlevel%&amp;#39; == &amp;#39;0&amp;#39; ( goto gotPrivileges) else ( goto getPrivileges) :getPrivileges if &amp;#39;%1&amp;#39;==&amp;#39;ELEV&amp;#39; (echo ELEV &amp;amp; shift /1 &amp;amp; goto gotPrivileges) ECHO.">
+<meta name="keywords" content="">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="http://localhost:1313/blog/windowsvslinux/">
+
+
+
+
+
+<link rel="stylesheet" href="./winvslinux_files/style.css">
+
+<link rel="stylesheet" href="./winvslinux_files/style(1).css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="http://localhost:1313/img/favicon.png">
+
+
+<link href="http://localhost:1313/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="http://localhost:1313/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="http://localhost:1313/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="http://localhost:1313/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="http://localhost:1313/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="http://localhost:1313/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows VS Linux in scripting">
+<meta name="twitter:description" content="Here’s a comparason between windows and linux
+elevatebuild.bat
+:::::::::::::::::::::::::::::::::::::::::::: :: Elevate.cmd - Version 4 :: Automatically check &amp; get admin rights :: see &quot;https://stackoverflow.com/a/12264592/1016343&quot; for description :::::::::::::::::::::::::::::::::::::::::::: @echo off CLS ECHO. ECHO ============================= ECHO Running Admin shell ECHO ============================= :init setlocal DisableDelayedExpansion set cmdInvoke=1 set winSysFolder=System32 set &quot;batchPath=%~0&quot; for %%k in (%0) do set batchName=%%~nk set &quot;vbsGetPrivileges=%temp%\OEgetPriv_%batchName%.vbs&quot; setlocal EnableDelayedExpansion :checkPrivileges NET FILE 1&gt;NUL 2&gt;NUL if &#39;%errorlevel%&#39; == &#39;0&#39; ( goto gotPrivileges) else ( goto getPrivileges) :getPrivileges if &#39;%1&#39;==&#39;ELEV&#39; (echo ELEV &amp; shift /1 &amp; goto gotPrivileges) ECHO.">
+
+
+
+<meta property="og:title" content="Windows VS Linux in scripting">
+<meta property="og:description" content="Here’s a comparason between windows and linux
+elevatebuild.bat
+:::::::::::::::::::::::::::::::::::::::::::: :: Elevate.cmd - Version 4 :: Automatically check &amp; get admin rights :: see &quot;https://stackoverflow.com/a/12264592/1016343&quot; for description :::::::::::::::::::::::::::::::::::::::::::: @echo off CLS ECHO. ECHO ============================= ECHO Running Admin shell ECHO ============================= :init setlocal DisableDelayedExpansion set cmdInvoke=1 set winSysFolder=System32 set &quot;batchPath=%~0&quot; for %%k in (%0) do set batchName=%%~nk set &quot;vbsGetPrivileges=%temp%\OEgetPriv_%batchName%.vbs&quot; setlocal EnableDelayedExpansion :checkPrivileges NET FILE 1&gt;NUL 2&gt;NUL if &#39;%errorlevel%&#39; == &#39;0&#39; ( goto gotPrivileges) else ( goto getPrivileges) :getPrivileges if &#39;%1&#39;==&#39;ELEV&#39; (echo ELEV &amp; shift /1 &amp; goto gotPrivileges) ECHO.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/blog/windowsvslinux/"><meta property="article:section" content="blog">
+<meta property="article:published_time" content="2021-05-08T17:15:49-06:00">
+<meta property="article:modified_time" content="2021-05-08T17:15:49-06:00"><meta property="og:site_name" content="mcfan&#39;s site">
+
+
+
+
+
+
+
+
+
+
+
+  <script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="http://localhost:1313/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"></path>
+</svg>
+</span>
+    <span class="logo__text">mcfan's site</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="http://localhost:1313/about">About</a></li>
+        
+      
+        
+          <li><a href="http://localhost:1313/blog">Blog</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"></path>
+</svg>
+</span>
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="https://discord.com/invite/xpE2gpF84Y">Discord Server</a></li>
+              
+            
+              
+                <li><a href="https://github.com/mcfan4256">Github</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="http://localhost:1313/about">About</a></li>
+      
+    
+      
+        <li><a href="http://localhost:1313/blog">Blog</a></li>
+      
+    
+      
+        <li><a href="https://discord.com/invite/xpE2gpF84Y">Discord Server</a></li>
+      
+    
+      
+        <li><a href="https://github.com/mcfan4256">Github</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"></path>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">Windows VS Linux in scripting</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2021-05-08
+        </span>
+
+        
+      
+
+      
+
+
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+      <p>Here’s a comparason between windows and linux</p>
+<p><code>elevatebuild.bat</code></p>
+<div class="highlight"><div class="code-toolbar"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4" class=" language-bat"><code class=" language-bat" data-lang="bat">::::::::::::::::::::::::::::::::::::::::::::
+:: Elevate.cmd - Version 4
+:: Automatically check &amp; get admin rights
+:: see "https://stackoverflow.com/a/12264592/1016343" for description
+::::::::::::::::::::::::::::::::::::::::::::
+ @echo off
+ CLS
+ ECHO.
+ ECHO =============================
+ ECHO Running Admin shell
+ ECHO =============================
+
+:init
+ setlocal DisableDelayedExpansion
+ set cmdInvoke=1
+ set winSysFolder=System32
+ set "batchPath=%~0"
+ for %%k in (%0) do set batchName=%%~nk
+ set "vbsGetPrivileges=%temp%\OEgetPriv_%batchName%.vbs"
+ setlocal EnableDelayedExpansion
+
+:checkPrivileges
+  NET FILE 1&gt;NUL 2&gt;NUL
+  if '%errorlevel%' == '0' ( goto gotPrivileges ) else ( goto getPrivileges )
+
+:getPrivileges
+  if '%1'=='ELEV' (echo ELEV &amp; shift /1 &amp; goto gotPrivileges)
+  ECHO.
+  ECHO **************************************
+  ECHO Invoking UAC for Privilege Escalation
+  ECHO **************************************
+
+  ECHO Set UAC = CreateObject^("Shell.Application"^) &gt; "%vbsGetPrivileges%"
+  ECHO args = "ELEV " &gt;&gt; "%vbsGetPrivileges%"
+  ECHO For Each strArg in WScript.Arguments &gt;&gt; "%vbsGetPrivileges%"
+  ECHO args = args ^&amp; strArg ^&amp; " "  &gt;&gt; "%vbsGetPrivileges%"
+  ECHO Next &gt;&gt; "%vbsGetPrivileges%"
+
+  if '%cmdInvoke%'=='1' goto InvokeCmd 
+
+  ECHO UAC.ShellExecute "!batchPath!", args, "", "runas", 1 &gt;&gt; "%vbsGetPrivileges%"
+  goto ExecElevation
+
+:InvokeCmd
+  ECHO args = "/c """ + "!batchPath!" + """ " + args &gt;&gt; "%vbsGetPrivileges%"
+  ECHO UAC.ShellExecute "%SystemRoot%\%winSysFolder%\cmd.exe", args, "", "runas", 1 &gt;&gt; "%vbsGetPrivileges%"
+
+:ExecElevation
+ "%SystemRoot%\%winSysFolder%\WScript.exe" "%vbsGetPrivileges%" %*
+ exit /B
+
+:gotPrivileges
+ setlocal &amp; cd /d %~dp0
+ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1&gt;nul 2&gt;nul  &amp;  shift /1)
+
+ ::::::::::::::::::::::::::::
+ ::START
+ ::::::::::::::::::::::::::::
+ REM Run shell as admin (example) - put here code as you like
+ ECHO %batchName%
+ cmd /k .build.bat
+</code></pre><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></div></div><p><code>build.bat (copied in development after it finally worked)</code></p>
+<div class="highlight"><div class="code-toolbar"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4" class=" language-bat"><code class=" language-bat" data-lang="bat">@echo off
+del public /Q /S
+pause
+xcopy C:\Users\mcfan4256\Documents\GitHub\site1\.git\ C:\Users\mcfan4256\Documents\GitHub\sitetemp\ /E /H /C /y
+pause
+hugo -D
+pause
+rmdir /s /q "C:\Users\mcfan4256\Documents\GitHub\site1\"
+rmdir  C:\Users\mcfan4256\Documents\GitHub\site1
+pause
+mkdir C:\Users\mcfan4256\Documents\GitHub\site1\
+pause
+xcopy [redacted]\mainsite\public\ C:\Users\mcfan4256\Documents\GitHub\site1 /E /H /C /y
+pause
+mkdir  C:\Users\mcfan4256\Documents\GitHub\site1\.git\
+pause
+xcopy C:\Users\mcfan4256\Documents\GitHub\sitetemp\.git\ C:\Users\mcfan4256\Documents\GitHub\site1\ /E /H /C /y
+pause
+exit
+</code></pre><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></div></div><p>Linux:</p>
+<div class="highlight"><div class="code-toolbar"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4" class=" language-sh"><code class=" language-sh" data-lang="sh">#!/bin/bash
+hugo -D
+cp -r ~/Documents/Github/site1/.git/* ~/Documents/Github/sitetemp/
+rm -rf ~/Documents/Github/site1/
+mkdir ~/Documents/Github/site1/
+cp -r public/* ~/Documents/Github/site1/
+mkdir ~/Documents/Github/site1/.git
+cp -r  ~/Documents/Github/sitetemp/* ~/Documents/Github/site1/.git/
+</code></pre><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></div></div><p>Much easier apparently on linux!</p>
+
+    </div>
+    
+
+    
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="http://localhost:1313/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"></path>
+</svg>
+</span>
+    <span class="logo__text">mcfan's site</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2021 Powered by
+          <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by
+          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="./winvslinux_files/main.js.download"></script>
+<script src="./winvslinux_files/prism.js.download"></script>
+
+
+      
+    </div>
+
+    
+  
+
+</body></html>
